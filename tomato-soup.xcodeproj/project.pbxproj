@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		717EDF95205C09FF7B480FB6 /* libPods-tomato-soup.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D55028E2760310791A13E507 /* libPods-tomato-soup.a */; };
+		8B195D7B1B93B2BF007C4A2E /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B195D7A1B93B2BF007C4A2E /* MovieDetailsViewController.swift */; };
 		8BE5F5B31B93746B00ED92CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE5F5B21B93746B00ED92CF /* AppDelegate.swift */; };
-		8BE5F5B51B93746B00ED92CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE5F5B41B93746B00ED92CF /* ViewController.swift */; };
 		8BE5F5B81B93746B00ED92CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BE5F5B61B93746B00ED92CF /* Main.storyboard */; };
 		8BE5F5BA1B93746B00ED92CF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BE5F5B91B93746B00ED92CF /* Images.xcassets */; };
 		8BE5F5BD1B93746B00ED92CF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BE5F5BB1B93746B00ED92CF /* LaunchScreen.xib */; };
 		8BE5F5C91B93746B00ED92CF /* tomato_soupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE5F5C81B93746B00ED92CF /* tomato_soupTests.swift */; };
+		8BE5F5D51B937CA300ED92CF /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE5F5D41B937CA300ED92CF /* MoviesViewController.swift */; };
+		8BE5F5DB1B938D8300ED92CF /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE5F5DA1B938D8300ED92CF /* MovieCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +29,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F1FF575BA6FFB218CBF93F9 /* Pods-tomato-soup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tomato-soup.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tomato-soup/Pods-tomato-soup.debug.xcconfig"; sourceTree = "<group>"; };
+		5C7EB9219571EDB7F101ACC4 /* Pods-tomato-soup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tomato-soup.release.xcconfig"; path = "Pods/Target Support Files/Pods-tomato-soup/Pods-tomato-soup.release.xcconfig"; sourceTree = "<group>"; };
+		8B195D751B93AF88007C4A2E /* tomato-soup-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tomato-soup-Bridging-Header.h"; sourceTree = "<group>"; };
+		8B195D7A1B93B2BF007C4A2E /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 		8BE5F5AD1B93746B00ED92CF /* tomato-soup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tomato-soup.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE5F5B11B93746B00ED92CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BE5F5B21B93746B00ED92CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8BE5F5B41B93746B00ED92CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8BE5F5B71B93746B00ED92CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8BE5F5B91B93746B00ED92CF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8BE5F5BC1B93746B00ED92CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8BE5F5C21B93746B00ED92CF /* tomato-soupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tomato-soupTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE5F5C71B93746B00ED92CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BE5F5C81B93746B00ED92CF /* tomato_soupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tomato_soupTests.swift; sourceTree = "<group>"; };
+		8BE5F5D41B937CA300ED92CF /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		8BE5F5DA1B938D8300ED92CF /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		D55028E2760310791A13E507 /* libPods-tomato-soup.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tomato-soup.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				717EDF95205C09FF7B480FB6 /* libPods-tomato-soup.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +66,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		758B6A48CDEA2E14132EBA9D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1F1FF575BA6FFB218CBF93F9 /* Pods-tomato-soup.debug.xcconfig */,
+				5C7EB9219571EDB7F101ACC4 /* Pods-tomato-soup.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8BE5F5A41B93746B00ED92CF = {
 			isa = PBXGroup;
 			children = (
 				8BE5F5AF1B93746B00ED92CF /* tomato-soup */,
 				8BE5F5C51B93746B00ED92CF /* tomato-soupTests */,
 				8BE5F5AE1B93746B00ED92CF /* Products */,
+				758B6A48CDEA2E14132EBA9D /* Pods */,
+				BBE8EBFD7E0E272E8ABAE934 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,8 +98,10 @@
 		8BE5F5AF1B93746B00ED92CF /* tomato-soup */ = {
 			isa = PBXGroup;
 			children = (
+				8BE5F5D71B938C9900ED92CF /* Views */,
+				8BE5F5D61B937CB900ED92CF /* View Controllers */,
 				8BE5F5B21B93746B00ED92CF /* AppDelegate.swift */,
-				8BE5F5B41B93746B00ED92CF /* ViewController.swift */,
+				8B195D751B93AF88007C4A2E /* tomato-soup-Bridging-Header.h */,
 				8BE5F5B61B93746B00ED92CF /* Main.storyboard */,
 				8BE5F5B91B93746B00ED92CF /* Images.xcassets */,
 				8BE5F5BB1B93746B00ED92CF /* LaunchScreen.xib */,
@@ -112,6 +135,31 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8BE5F5D61B937CB900ED92CF /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8BE5F5D41B937CA300ED92CF /* MoviesViewController.swift */,
+				8B195D7A1B93B2BF007C4A2E /* MovieDetailsViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		8BE5F5D71B938C9900ED92CF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8BE5F5DA1B938D8300ED92CF /* MovieCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		BBE8EBFD7E0E272E8ABAE934 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D55028E2760310791A13E507 /* libPods-tomato-soup.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +167,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8BE5F5CC1B93746B00ED92CF /* Build configuration list for PBXNativeTarget "tomato-soup" */;
 			buildPhases = (
+				528D6615E1FEB6216AAF691B /* Check Pods Manifest.lock */,
 				8BE5F5A91B93746B00ED92CF /* Sources */,
 				8BE5F5AA1B93746B00ED92CF /* Frameworks */,
 				8BE5F5AB1B93746B00ED92CF /* Resources */,
+				3711DBAF19DC5AAD08CDF2D1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,13 +257,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3711DBAF19DC5AAD08CDF2D1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tomato-soup/Pods-tomato-soup-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		528D6615E1FEB6216AAF691B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8BE5F5A91B93746B00ED92CF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BE5F5B51B93746B00ED92CF /* ViewController.swift in Sources */,
+				8B195D7B1B93B2BF007C4A2E /* MovieDetailsViewController.swift in Sources */,
 				8BE5F5B31B93746B00ED92CF /* AppDelegate.swift in Sources */,
+				8BE5F5D51B937CA300ED92CF /* MoviesViewController.swift in Sources */,
+				8BE5F5DB1B938D8300ED92CF /* MovieCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,21 +423,28 @@
 		};
 		8BE5F5CD1B93746B00ED92CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F1FF575BA6FFB218CBF93F9 /* Pods-tomato-soup.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "tomato-soup/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "tomato-soup/tomato-soup-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		8BE5F5CE1B93746B00ED92CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C7EB9219571EDB7F101ACC4 /* Pods-tomato-soup.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "tomato-soup/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "tomato-soup/tomato-soup-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -409,6 +501,7 @@
 				8BE5F5CE1B93746B00ED92CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8BE5F5CF1B93746B00ED92CF /* Build configuration list for PBXNativeTarget "tomato-soupTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +510,7 @@
 				8BE5F5D11B93746B00ED92CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
