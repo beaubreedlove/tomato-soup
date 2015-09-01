@@ -28,6 +28,8 @@ Time spent: `10`
 ![Video Walkthrough](http://imgur.com/RFp7Btj,C6hoIrl#0)
 ![Error Message](http://imgur.com/RFp7Btj,C6hoIrl#1)
 
+In case you can't see those images above, the links are here: http://imgur.com/RFp7Btj,C6hoIrl#0 | http://imgur.com/RFp7Btj,C6hoIrl#1
+
 Credits
 ---------
 * [Rotten Tomatoes API](http://developer.rottentomatoes.com/docs/read/JSON)
