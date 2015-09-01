@@ -134,7 +134,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         return cell
     }
     
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // TODO: This doesn't deselect the cell when the back button is hit from the MovieDetailView
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
