@@ -49,8 +49,9 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
         var urlString = "https://gist.githubusercontent.com/timothy1ee/d1778ca5b944ed974db0/raw/489d812c7ceeec0ac15ab77bf7c47849f2d1eb2b/gistfile1.json"
         
-        if Int(arc4random_uniform(2)) == 1 {
-            urlString = "https://gist.githubusercontent.com/timothy1ee/d1778ca5b944ed974db0/rawxx/489d812c7ceeec0ac15ab77bf7c47849f2d1eb2b/gistfile1.json"
+        // Simulating an occasional bad connection
+        if Int(arc4random_uniform(10)) == 1 {
+            urlString = "https://gist.githubusercontent.com/some_fake_endpoint"
         }
         
         let url = NSURL(string: urlString)!
