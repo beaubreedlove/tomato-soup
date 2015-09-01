@@ -49,6 +49,10 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
         var urlString = "https://gist.githubusercontent.com/timothy1ee/d1778ca5b944ed974db0/raw/489d812c7ceeec0ac15ab77bf7c47849f2d1eb2b/gistfile1.json"
         
+        if Int(arc4random_uniform(2)) == 1 {
+            urlString = "https://gist.githubusercontent.com/timothy1ee/d1778ca5b944ed974db0/rawxx/489d812c7ceeec0ac15ab77bf7c47849f2d1eb2b/gistfile1.json"
+        }
+        
         let url = NSURL(string: urlString)!
         let request = NSURLRequest(URL: url)
         
@@ -63,7 +67,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
                 
                 self.dismissError()
             } else {
-                self.showError("There was a network error")
+                self.showError("Network error: Pull to refresh")
             }
             
             self.refreshControl.endRefreshing()
@@ -92,7 +96,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let  errorCell = tableView.dequeueReusableCellWithIdentifier("ErrorCell") as! ErrorCell
         
-        errorCell.backgroundColor = UIColor.cyanColor()
+        errorCell.backgroundColor = UIColor.redColor()
         errorCell.errorLabel.text = errorMessage
         
         return errorCell
