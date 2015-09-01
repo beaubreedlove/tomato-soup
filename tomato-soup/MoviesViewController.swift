@@ -16,31 +16,62 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     
     var errorMessage: String?
     
+    var refreshControl: UIRefreshControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: "onRefresh", forControlEvents: UIControlEvents.ValueChanged)
+        tableView.insertSubview(refreshControl, atIndex: 0)
+        
+        self.getMoviesFromServer()
+    }
+    
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
+    }
+    
+    func onRefresh() {
+        getMoviesFromServer()
+//        delay(2, closure: {
+//            self.refreshControl.endRefreshing()
+//        })
+    }
+    
+    func getMoviesFromServer() {
         // let url = NSURL(string: "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?limit=20&country=us")!
-        let url = NSURL(string: "https://gist.githubusercontent.com/timothy1ee/d1778ca5b944ed974db0/raw/489d812c7ceeec0ac15ab77bf7c47849f2d1eb2b/gistfile1.json")!
+        
+        var urlString = "https://gist.githubusercontent.com/timothy1ee/d1778ca5b944ed974db0/raw/489d812c7ceeec0ac15ab77bf7c47849f2d1eb2b/gistfile1.json"
+        
+        let url = NSURL(string: urlString)!
         let request = NSURLRequest(URL: url)
         
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
             
-            if (response as! NSHTTPURLResponse).statusCode >= 400 {
-                self.showError("There was a network error")
-            } else {
+            if ((response as! NSHTTPURLResponse).statusCode == 200) {
+                let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? NSDictionary
+                
+                if let json = json {
+                    self.movies = json["movies"] as? [NSDictionary]
+                }
+                
                 self.dismissError()
+            } else {
+                self.showError("There was a network error")
             }
             
-            let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? NSDictionary
+            self.refreshControl.endRefreshing()
             
-            if let json = json {
-                self.movies = json["movies"] as? [NSDictionary]
-                self.tableView.reloadData()
-            }
+            self.tableView.dataSource = self
+            self.tableView.delegate = self
+            self.tableView.reloadData()
         }
-        
-        tableView.dataSource = self
-        tableView.delegate = self
     }
     
     func showError(errorMessage: String) {
@@ -50,6 +81,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     
     func dismissError() {
         self.errorMessage = nil
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
