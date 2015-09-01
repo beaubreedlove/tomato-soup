@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		717EDF95205C09FF7B480FB6 /* libPods-tomato-soup.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D55028E2760310791A13E507 /* libPods-tomato-soup.a */; };
 		8B195D7B1B93B2BF007C4A2E /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B195D7A1B93B2BF007C4A2E /* MovieDetailsViewController.swift */; };
+		8B22F64E1B951C5900425A4D /* ErrorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B22F64D1B951C5900425A4D /* ErrorCell.swift */; };
 		8BE5F5B31B93746B00ED92CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE5F5B21B93746B00ED92CF /* AppDelegate.swift */; };
 		8BE5F5B81B93746B00ED92CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BE5F5B61B93746B00ED92CF /* Main.storyboard */; };
 		8BE5F5BA1B93746B00ED92CF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BE5F5B91B93746B00ED92CF /* Images.xcassets */; };
@@ -33,6 +34,7 @@
 		5C7EB9219571EDB7F101ACC4 /* Pods-tomato-soup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tomato-soup.release.xcconfig"; path = "Pods/Target Support Files/Pods-tomato-soup/Pods-tomato-soup.release.xcconfig"; sourceTree = "<group>"; };
 		8B195D751B93AF88007C4A2E /* tomato-soup-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tomato-soup-Bridging-Header.h"; sourceTree = "<group>"; };
 		8B195D7A1B93B2BF007C4A2E /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
+		8B22F64D1B951C5900425A4D /* ErrorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorCell.swift; sourceTree = "<group>"; };
 		8BE5F5AD1B93746B00ED92CF /* tomato-soup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tomato-soup.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE5F5B11B93746B00ED92CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BE5F5B21B93746B00ED92CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				8BE5F5DA1B938D8300ED92CF /* MovieCell.swift */,
+				8B22F64D1B951C5900425A4D /* ErrorCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				8B195D7B1B93B2BF007C4A2E /* MovieDetailsViewController.swift in Sources */,
 				8BE5F5B31B93746B00ED92CF /* AppDelegate.swift in Sources */,
 				8BE5F5D51B937CA300ED92CF /* MoviesViewController.swift in Sources */,
+				8B22F64E1B951C5900425A4D /* ErrorCell.swift in Sources */,
 				8BE5F5DB1B938D8300ED92CF /* MovieCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

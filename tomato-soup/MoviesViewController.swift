@@ -14,14 +14,23 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     
     var movies: [NSDictionary]?
     
+    var errorMessage: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // let url = NSURL(string: "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?limit=20&country=us")!
         let url = NSURL(string: "https://gist.githubusercontent.com/timothy1ee/d1778ca5b944ed974db0/raw/489d812c7ceeec0ac15ab77bf7c47849f2d1eb2b/gistfile1.json")!
         let request = NSURLRequest(URL: url)
         
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+            
+            if (response as! NSHTTPURLResponse).statusCode >= 400 {
+                self.showError("There was a network error")
+            } else {
+                self.dismissError()
+            }
+            
             let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? NSDictionary
             
             if let json = json {
@@ -33,10 +42,36 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         tableView.dataSource = self
         tableView.delegate = self
     }
+    
+    func showError(errorMessage: String) {
+        self.errorMessage = errorMessage
+        self.tableView.reloadData()
+    }
+    
+    func dismissError() {
+        self.errorMessage = nil
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let  errorCell = tableView.dequeueReusableCellWithIdentifier("ErrorCell") as! ErrorCell
+        
+        errorCell.backgroundColor = UIColor.cyanColor()
+        errorCell.errorLabel.text = errorMessage
+        
+        return errorCell
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if errorMessage == nil {
+            return 0
+        } else {
+            return 40.0
+        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
