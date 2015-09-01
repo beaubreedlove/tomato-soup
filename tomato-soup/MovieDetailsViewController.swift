@@ -22,11 +22,29 @@ class MovieDetailsViewController: UIViewController {
         titleLabel.text = movie["title"] as? String
         synopsisLabel.text = movie["synopsis"] as? String
         
-        let url = NSURL(string: movie.valueForKeyPath("posters.thumbnail") as! String)!
+        let imageUrlString = movie.valueForKeyPath("posters.thumbnail") as! String
+        
+        let url = NSURL(string: imageUrlString)!
         
         println(url)
         
         imageView.setImageWithURL(url)
+        
+        loadLargerPoster(imageUrlString)
+    }
+    
+    func loadLargerPoster(imageUrlString: String) {
+        var range = imageUrlString.rangeOfString(".*cloudfront.net/", options: .RegularExpressionSearch)
+        if let range = range {
+            println("trying this")
+            var imageUrlString = imageUrlString.stringByReplacingCharactersInRange(range, withString: "https://content6.flixster.com/")
+            
+            println(imageUrlString)
+            
+            let url = NSURL(string: imageUrlString)!
+            
+            imageView.setImageWithURL(url)
+        }
     }
 
     override func didReceiveMemoryWarning() {
